@@ -4,7 +4,10 @@
   "description": "The second version of the black and techy website.",
   "main": "server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently -c 'red,blue' -n 'server,client' \"npm run server\" \"npm run client\""
   },
   "author": "Davin Reid",
   "license": "MIT",
