@@ -17,8 +17,24 @@
   text-align: left;
 }
 
+.Create {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .Create h1 {
-  margin-bottom: 2%;
+  margin-bottom: 4%;
+}
+
+.post-inputs {
+  display: block;
+  margin: 5px auto;
+  font-size: 1.15rem;
+}
+
+input[type='text'] {
+  width: 245px;
+  height: 20px;
 }
 
 footer {
