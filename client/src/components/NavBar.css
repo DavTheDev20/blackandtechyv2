@@ -3,6 +3,7 @@ nav {
   /* padding-bottom: 0.75rem; */
   text-align: center;
   margin-bottom: 2%;
+  border-bottom: 2px solid #dd2c00;
 }
 
 nav ul {
@@ -19,4 +20,24 @@ nav li {
 
 nav a {
   margin: 0;
+  color: #ffff;
+  text-decoration: none;
+}
+
+.home-link {
+  font-family: 'Ranchers', cursive;
+  font-size: 2.25rem;
+  -webkit-text-stroke: 1px black;
+}
+
+.posts-link {
+  font-weight: 600;
+}
+
+.create-link {
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #00bcd4;
 }

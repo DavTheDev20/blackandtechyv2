@@ -5,6 +5,7 @@ import Posts from './pages/Posts.Page';
 import Create from './pages/Create.Page';
 import NavBar from './components/NavBar';
 import './App.css';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
   );

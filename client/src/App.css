@@ -1,0 +1,28 @@
+.welcome-heading {
+  text-align: initial;
+  width: 18%;
+  margin-left: 550px;
+  margin-top: 250px;
+  font-size: 3rem;
+}
+
+.welcome-text {
+  float: right;
+  width: 18%;
+  display: block;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 150px;
+  margin-right: 550px;
+  text-align: left;
+}
+
+.Create h1 {
+  margin-bottom: 2%;
+}
+
+footer {
+  position: absolute;
+  left: 46.45%;
+  bottom: 1.5%;
+}
