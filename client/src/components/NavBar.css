@@ -1,0 +1,22 @@
+nav {
+  background-color: #ff5722;
+  /* padding-bottom: 0.75rem; */
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 1.25rem 10rem;
+  font-size: 1.25rem;
+}
+
+nav a {
+  margin: 0;
+}
