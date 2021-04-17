@@ -52,6 +52,45 @@ const Create = () => {
     }
   };
 
+  const handleSubmission = (event: any) => {
+    event.preventDefault();
+
+    let postItems: any = [];
+    Object.values(post).forEach((item) => {
+      postItems.push(item);
+    });
+
+    for (var i = 0; i < postItems.length - 2; i++) {
+      if (postItems[i] === '') {
+        alert('Please enter data in every box.');
+        return;
+      }
+    }
+
+    axios({
+      method: 'POST',
+      url: 'http://localhost:8080/posts/save',
+      data: {
+        author: post.author,
+        title: post.title,
+        postContent: post.postContent,
+        link: post.link,
+      },
+    })
+      .then((res) => {
+        console.log(res.data.msg);
+        setPost({
+          author: '',
+          title: '',
+          postContent: '',
+          link: '',
+        });
+      })
+      .catch((err) => {
+        alert('Error submitting post, please try again.');
+      });
+  };
+
   const [addLink, setAddLink] = useState(false);
 
   const toggleAddlink = (event: any) => {
@@ -63,7 +102,7 @@ const Create = () => {
     <div className="Create">
       <h1>Create</h1>
 
-      <form>
+      <form onSubmit={handleSubmission}>
         <input
           className="post-inputs"
           type="text"
