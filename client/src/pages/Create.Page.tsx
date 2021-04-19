@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { set } from 'mongoose';
 
 const Create = () => {
   const [post, setPost] = useState({
@@ -136,7 +135,7 @@ const Create = () => {
           value={post.link}
           onChange={handleChange}
         />
-        <button className="post-inputs">Post</button>
+        <button className="post-inputs post-button">Post</button>
       </form>
     </div>
   );

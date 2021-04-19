@@ -24,6 +24,7 @@
 
 .Create h1 {
   margin-bottom: 4%;
+  color: #00bcd4;
 }
 
 .post-inputs {
@@ -32,9 +33,46 @@
   font-size: 1.15rem;
 }
 
+.post-button {
+  padding: 10px;
+  width: 4%;
+  border-radius: 15px;
+  border: none;
+  background-color: #ff5722;
+  color: #ffff;
+}
+
+.post-button:hover {
+  background-color: #dd2c00;
+  cursor: pointer;
+}
+
+textarea {
+  border: 1px solid #dd2c00;
+  border-radius: 30px;
+  padding: 10px;
+}
+
 input[type='text'] {
   width: 245px;
+  border: 1px solid #dd2c00;
+  border-radius: 30px;
+  box-shadow: 1px 1px 2px black;
   height: 20px;
+  padding: 5px;
+}
+
+.Posts h1 {
+  margin-bottom: 4%;
+  color: #00bcd4;
+}
+
+.post {
+  margin: 2% auto;
+  border: 2px solid #00bcd4;
+  border-radius: 30px;
+  width: 20%;
+  padding: 2%;
 }
 
 footer {
