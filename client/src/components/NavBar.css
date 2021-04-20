@@ -41,3 +41,18 @@ nav a {
 nav a:hover {
   color: #00bcd4;
 }
+
+@media only screen and (max-width: 600px) {
+  .home-link {
+    font-size: 1.5rem;
+  }
+
+  nav li {
+    font-size: 1rem;
+  }
+
+  .posts-link,
+  .create-link {
+    font-weight: normal;
+  }
+}

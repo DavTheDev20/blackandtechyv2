@@ -80,3 +80,6 @@ footer {
   left: 46.45%;
   bottom: 1.5%;
 }
+
+@media only screen and (max-width: 600px) {
+}
