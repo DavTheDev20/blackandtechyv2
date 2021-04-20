@@ -1,8 +1,8 @@
 .welcome-heading {
   text-align: initial;
   width: 18%;
-  margin-left: 550px;
-  margin-top: 250px;
+  margin-left: 34.375rem;
+  margin-top: 15.625rem;
   font-size: 3rem;
 }
 
@@ -12,8 +12,8 @@
   display: block;
   font-size: 1.5rem;
   position: relative;
-  bottom: 150px;
-  margin-right: 550px;
+  bottom: 9.375rem;
+  margin-right: 34.375rem;
   text-align: left;
 }
 

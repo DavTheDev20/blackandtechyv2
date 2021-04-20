@@ -1,0 +1,1 @@
+- Configure the database to mongodb cloud

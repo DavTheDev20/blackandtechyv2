@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongooose = require('mongoose');
 const morgan = require('morgan');
