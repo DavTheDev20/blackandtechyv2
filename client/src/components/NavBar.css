@@ -47,8 +47,12 @@ nav a:hover {
     font-size: 1.5rem;
   }
 
-  nav li {
-    font-size: 1rem;
+  .nav {
+    padding-bottom: 15%;
+  }
+
+  nav ul {
+    display: none;
   }
 
   .posts-link,
