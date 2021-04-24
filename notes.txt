@@ -1,5 +1,5 @@
 - Add hamburger menu to website on mobile with links to create and post
-- Refactor styling to look the same on every computer screen
+- Refactor styling to look the same on every computer screen ✔️
 - Refactor code for better readability for future development
 - Configure the database to mongodb cloud
 - Set up server for heroku deployment ??

@@ -1,6 +1,6 @@
 .welcome-heading {
   text-align: initial;
-  width: 25%;
+  width: 20%;
   margin-left: 25%;
   margin-top: 14rem;
   font-size: 3rem;
@@ -12,10 +12,14 @@
   display: block;
   font-size: 1.5rem;
   position: relative;
-  bottom: 11rem;
+  bottom: 10rem;
   right: 25%;
   /* margin-right: 34.375rem; */
   text-align: left;
+}
+
+.welcome-text-section {
+  color: #ff5722;
 }
 
 .Create {
@@ -63,6 +67,11 @@ input[type='text'] {
   padding: 5px;
 }
 
+input[type='text']:focus,
+textarea:focus {
+  outline: 3px solid #ff5722;
+}
+
 .Posts h1 {
   margin-bottom: 4%;
   color: #00bcd4;
@@ -80,6 +89,23 @@ footer {
   position: absolute;
   left: 46.45%;
   bottom: 1.5%;
+}
+
+@media only screen and (max-width: 1536px) {
+  .welcome-text {
+    bottom: 10rem;
+    width: 29.1%;
+    right: 17.5%;
+  }
+
+  .welcome-heading {
+    width: 25%;
+  }
+
+  .post-button {
+    width: 5.5%;
+    margin-top: 7px;
+  }
 }
 
 @media only screen and (max-width: 600px) {

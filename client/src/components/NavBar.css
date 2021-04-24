@@ -1,3 +1,4 @@
+/* Code without media query = Desktop Viewport */
 nav {
   background-color: #ff5722;
   /* padding-bottom: 0.75rem; */
@@ -15,7 +16,7 @@ nav ul {
 nav li {
   display: inline-block;
   margin: 1.25rem 10rem;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
 }
 
 nav a {
@@ -32,31 +33,50 @@ nav a {
 
 .posts-link {
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .create-link {
   font-weight: 600;
+  text-decoration: underline;
 }
 
 nav a:hover {
   color: #00bcd4;
 }
 
+.hamburger-icon {
+  display: none;
+}
+
+.home-link-mobile {
+  display: none;
+}
+
+/* Laptops */
+@media only screen and (max-width: 1536) {
+}
+
+/* Mobile Phones */
 @media only screen and (max-width: 600px) {
-  .home-link {
-    font-size: 1.5rem;
-  }
-
-  .nav {
-    padding-bottom: 15%;
-  }
-
-  nav ul {
+  nav li {
     display: none;
   }
-
-  .posts-link,
-  .create-link {
-    font-weight: normal;
+  nav {
+    padding-bottom: 15%;
+  }
+  .hamburger-icon {
+    display: initial;
+    position: absolute;
+    left: 5%;
+    top: 1%;
+  }
+  .home-link-mobile {
+    font-family: 'Ranchers', cursive;
+    display: initial;
+    position: absolute;
+    font-size: 2rem;
+    top: 0.75%;
+    right: 23%;
   }
 }
