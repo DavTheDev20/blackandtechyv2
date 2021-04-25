@@ -45,11 +45,7 @@ nav a:hover {
   color: #00bcd4;
 }
 
-.hamburger-icon {
-  display: none;
-}
-
-.home-link-mobile {
+.mobile-elements {
   display: none;
 }
 
@@ -69,14 +65,72 @@ nav a:hover {
     display: initial;
     position: absolute;
     left: 5%;
-    top: 1%;
+    top: 2%;
   }
   .home-link-mobile {
     font-family: 'Ranchers', cursive;
+    -webkit-text-stroke: 1px black;
     display: initial;
     position: absolute;
-    font-size: 2rem;
+    font-size: 2.25rem;
     top: 0.75%;
     right: 23%;
+  }
+
+  .mobile-elements {
+    display: initial;
+  }
+
+  .mobile-menu {
+    z-index: 1;
+    width: 40%;
+    height: 100%;
+    background-color: #00bcd4;
+    opacity: 97%;
+    position: absolute;
+    animation: 0.75s ease-out 0s 1 slide-in;
+  }
+
+  .mobile-menu ul li {
+    display: inline;
+  }
+
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  nav a:hover {
+    color: #ffff;
+  }
+
+  .menu-test-button {
+    position: relative;
+    right: 150px;
+  }
+
+  .posts-link-mobile {
+    position: absolute;
+    left: 10px;
+    top: 65px;
+    font-size: 2.5rem;
+  }
+
+  .create-link-mobile {
+    position: absolute;
+    left: 10px;
+    top: 150px;
+    font-size: 2.5rem;
+  }
+
+  .mobile-menu-exit-button {
+    margin-top: 5%;
+    margin-left: 65%;
+    color: #ffff;
+    -webkit-text-stroke: 1px black;
   }
 }
