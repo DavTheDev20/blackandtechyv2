@@ -88,19 +88,27 @@ nav a:hover {
     background-color: #00bcd4;
     opacity: 97%;
     position: absolute;
-    animation: 0.75s ease-out 0s 1 slide-in;
+    animation: 0.75s ease-out 0s 1 slide-in-from-left;
   }
 
   .mobile-menu ul li {
     display: inline;
   }
 
-  @keyframes slide-in {
+  @keyframes slide-in-from-left {
     0% {
+      -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
     }
     100% {
+      -webkit-transform: translateX(0);
       transform: translateX(0);
+      -ms-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -o-transform: translateX(0);
     }
   }
 
