@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const mongooose = require('mongoose');
+const mongoose = require('mongoose');
 const morgan = require('morgan');
 const cors = require('cors');
 const path = require('path');
@@ -9,16 +9,16 @@ const postsRouter = require('./routes/postsRouter');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const testingDatabase = 'black-techy-v2-DB';
+const localDB_URL = `mongodb://localhost:27017/black-techy-v2-DB`;
 
-mongooose.connect(
-  `mongodb://localhost:27017/${testingDatabase}`,
+mongoose.connect(
+  process.env.MONGODB_CLOUD_URI, //Connects to mongodb cloud database.
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
   (err: any) =>
-    err ? console.log(err) : console.log(`Connected to ${testingDatabase}`)
+    err ? console.log(err) : console.log('Connected to remote database')
   // Checks if the database has successfully connected.
 );
 

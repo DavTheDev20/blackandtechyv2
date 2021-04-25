@@ -22,7 +22,7 @@ postsRouter
       author: req.body.author,
       title: req.body.title,
       postContent: req.body.postContent,
-      link: req.body.link,
+      link: req.body.link ? req.body.link : null,
     });
 
     newPost.save((err, post) => {

@@ -28,9 +28,13 @@ const Posts = () => {
             <h2>{post.title}</h2>
             <h3>By: {post.author}</h3>
             <p>{post.postContent}</p>
-            <a href={post.link} target="__blank">
-              Link
-            </a>
+            {post.link ? (
+              <a href={post.link} target="__blank">
+                Link
+              </a>
+            ) : (
+              <div></div>
+            )}
           </div>
         );
       })}
