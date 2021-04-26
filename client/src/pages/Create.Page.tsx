@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 const Create = () => {
   const [post, setPost] = useState({
@@ -61,7 +62,10 @@ const Create = () => {
 
     for (var i = 0; i < postItems.length - 2; i++) {
       if (postItems[i] === '') {
-        alert('Please enter data in every box.');
+        swal({
+          icon: 'error',
+          text: 'Please enter data in every box.',
+        });
         return;
       }
     }
@@ -86,7 +90,10 @@ const Create = () => {
         });
       })
       .catch((err) => {
-        alert('Error submitting post, please try again.');
+        swal({
+          icon: 'error',
+          text: 'Error submitting post, please try again.',
+        });
       });
   };
 

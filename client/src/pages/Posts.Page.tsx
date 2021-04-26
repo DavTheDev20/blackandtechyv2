@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 const Posts = () => {
   const [postsArr, setPostsArr] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
 
-  const getPosts = () => {
-    axios
-      .get('http://localhost:8080/posts')
-      .then((res) => {
+  const getPosts = async () => {
+    try {
+      await axios.get('http://localhost:8080/posts').then((res) => {
         setPostsArr(res.data);
-      })
-      .catch((err) => {
-        alert('Error retrieving posts, please try again later.');
       });
+      // setIsLoading(false);
+    } catch {
+      swal({
+        icon: 'error',
+        text: 'Error retrieving posts, please try again later.',
+      });
+    }
   };
 
   useEffect(() => {
@@ -22,6 +27,10 @@ const Posts = () => {
   return (
     <div className="Posts">
       <h1>Posts</h1>
+      {/* <i
+        className="fas fa-spinner loading-spinner fa-3x"
+        style={isLoading ? { display: 'inital' } : { display: 'none' }}
+      ></i> */}
       {postsArr.map((post: any) => {
         return (
           <div className="post" key={post._id}>

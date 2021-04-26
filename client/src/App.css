@@ -4,6 +4,16 @@
   margin-left: 25%;
   margin-top: 14rem;
   font-size: 3rem;
+  animation: 1s ease-out 0s 1 move-in-from-left;
+}
+
+@keyframes move-in-from-left {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 .welcome-text {
@@ -50,6 +60,25 @@
 .post-button:hover {
   background-color: #dd2c00;
   cursor: pointer;
+}
+
+.loading-spinner {
+  position: absolute;
+  right: 48.25%;
+  animation-name: spinning;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  animation-timing-function: linear;
+}
+
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 textarea {
@@ -114,6 +143,16 @@ footer {
     font-size: 2.25rem;
     text-align: center;
     margin: 3% auto;
+    animation: 1.5s ease-out 0s 1 drop_down;
+  }
+
+  @keyframes drop_down {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
   }
 
   .welcome-text {
