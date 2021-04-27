@@ -4,6 +4,7 @@ import Home from './pages/Home.Page';
 import Posts from './pages/Posts.Page';
 import Create from './pages/Create.Page';
 import NavBar from './components/NavBar';
+import Admin from './pages/Admin.Page';
 import './App.css';
 import Footer from './components/Footer';
 
@@ -13,6 +14,9 @@ function App() {
       <div>
         <NavBar postsLink="/posts" homeLink="/" createLink="/create" />
         <Switch>
+          <Route path="/posts/api/admin">
+            <Admin />
+          </Route>
           <Route path="/posts">
             <Posts />
           </Route>

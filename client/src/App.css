@@ -121,7 +121,24 @@ textarea:focus {
 
 .post p {
   width: 60%;
-  margin: 3% auto 0;
+  margin: 3% auto 2%;
+}
+
+.Admin table {
+  text-align: center;
+  margin: 2% auto;
+  border: 2px solid black;
+}
+
+.Admin td {
+  border: 1px solid black;
+  padding: 1.5%;
+}
+
+.post-row .delete-button {
+  color: red;
+  position: relative;
+  top: 5%;
 }
 
 footer {
@@ -186,6 +203,10 @@ footer {
 
   .post {
     width: 75%;
+  }
+
+  .Admin {
+    display: none;
   }
 
   footer {

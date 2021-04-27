@@ -8,7 +8,7 @@ const Posts = () => {
 
   const getPosts = async () => {
     try {
-      await axios.get('http://localhost:8080/posts').then((res) => {
+      await axios.get('http://localhost:8080/posts/api').then((res) => {
         setPostsArr(res.data);
       });
       // setIsLoading(false);

@@ -8,13 +8,13 @@ const NavBar = (props: any) => {
   return (
     <nav>
       <div className="mobile-elements">
+        {/* eslint-disable-next-line */}
         <a href="#" onClick={() => setMenu(true)}>
           <i
             className="hamburger-icon fas fa-bars fa-2x"
             style={{ color: '#ffff' }}
           ></i>
         </a>
-
         <Link to={props.homeLink} className="home-link-mobile">
           Black & Techy
         </Link>
@@ -22,6 +22,7 @@ const NavBar = (props: any) => {
           className="mobile-menu"
           style={menu ? { display: 'block' } : { display: 'none' }}
         >
+          {/* eslint-disable-next-line */}
           <a href="#" onClick={() => setMenu(false)}>
             <i className="mobile-menu-exit-button far fa-times-circle fa-2x"></i>
           </a>

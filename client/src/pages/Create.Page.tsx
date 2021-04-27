@@ -72,7 +72,7 @@ const Create = () => {
 
     axios({
       method: 'POST',
-      url: 'http://localhost:8080/posts/save',
+      url: 'http://localhost:8080/posts/api/save',
       data: {
         author: post.author,
         title: post.title,
