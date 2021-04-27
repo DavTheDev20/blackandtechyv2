@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "server": "cd server && nodemon server.js",
-    "install-client": "cd client && npm install",
+    "install-client": "cd client && npm install && npm i --save-dev @types/react-router-dom",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "cd server && node server.js",
     "client": "cd client && npm start",
