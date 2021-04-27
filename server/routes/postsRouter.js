@@ -1,7 +1,7 @@
 const express = require('express');
-const postsRouter = express.Router();
 const mongoose = require('mongoose');
 const Post = require('../models/post');
+const postsRouter = express.Router();
 
 postsRouter
 

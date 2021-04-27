@@ -1,10 +1,10 @@
 - Add hamburger menu to website on mobile with links to create and post ✔️
 - Refactor styling to look the same on every computer screen ✔️
 - Refactor code for better readability for future development
-- Configure the database to mongodb cloud ✔
+- Configure the database to mongodb cloud ✔️
 - Set up server for heroku deployment ??
-- User test website to make sure it is working as expected
-- Tweak based on user testing
+- User test website to make sure it is working as expected ✔️
+- Tweak based on user testing ✔️
 - Finish up changes for deployment
 - Specify method of deployment (AWS, Azure, Heroku, etc...)
 - Puchase domain (blackandtechyblog.com)
