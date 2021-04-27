@@ -5,9 +5,11 @@
   "main": "server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
     "server": "cd server && nodemon server.js",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "cd server && node server.js",
     "client": "cd client && npm start",
     "dev": "concurrently -c 'red,blue' -n 'server,client' \"npm run server\" \"npm run client\""
   },
