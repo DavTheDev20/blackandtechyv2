@@ -89,10 +89,32 @@ nav a:hover {
     opacity: 97%;
     position: absolute;
     animation: 0.75s ease-out 0s 1 slide-in-from-left;
+    -webkit-animation-name: slide-in-from-left;
+    -webkit-animation-duration: 0.75s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
   }
 
   .mobile-menu ul li {
     display: inline;
+  }
+
+  @-webkit-keyframes slide-in-from-left {
+    0% {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+      -ms-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -o-transform: translateX(0);
+    }
   }
 
   @keyframes slide-in-from-left {
