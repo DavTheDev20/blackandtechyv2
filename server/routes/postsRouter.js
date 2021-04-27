@@ -5,7 +5,7 @@ const Post = require('../models/post');
 
 postsRouter
 
-  .get('/', (req, res) => {
+  .get('/api', (req, res) => {
     //Looks for and returns all posts in database.
 
     Post.find((err, posts) => {
@@ -17,7 +17,7 @@ postsRouter
     });
   })
 
-  .post('/save', (req, res) => {
+  .post('/api/save', (req, res) => {
     const newPost = new Post({
       author: req.body.author,
       title: req.body.title,
@@ -35,7 +35,7 @@ postsRouter
     });
   })
 
-  .delete('/delete', (req, res) => {
+  .delete('/api/delete', (req, res) => {
     Post.deleteOne({ _id: req.body._id }, (err, response) => {
       if (err) {
         console.log(err);

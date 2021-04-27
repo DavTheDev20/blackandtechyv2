@@ -28,4 +28,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/posts', postsRouter);
 
+if (process.env.NODE_ENV === 'production') {
+  //Builds application upon deployment.
+  app.use(express.static('client/build/'));
+
+  app.get('*', (req: any, res: any) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
 app.listen(port, () => console.log(`Server running on port: ${port}`));
