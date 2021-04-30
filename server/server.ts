@@ -9,7 +9,7 @@ const postsRouter = require('./routes/postsRouter');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const localDB_URL = `mongodb://localhost:27017/black-techy-v2-DB`;
+// const localDB_URL = `mongodb://localhost:27017/black-techy-v2-DB`;
 
 mongoose.connect(
   process.env.MONGODB_CLOUD_URI, //Connects to mongodb cloud database.
