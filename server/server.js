@@ -25,10 +25,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/posts', postsRouter);
 if (process.env.NODE_ENV === 'production') {
-    //Builds application upon deployment.
-    app.use(express.static('client/build/'));
+    // Accesses application files from build upon deployment.
+    app.use(express.static(path.join(__dirname, '../client/build')));
     app.get('*', function (req, res) {
-        res.sendFile(path.resolve('client', 'build', 'index.html'));
+        res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
     });
 }
 app.listen(port, function () { return console.log("Server running on port: " + port); });
