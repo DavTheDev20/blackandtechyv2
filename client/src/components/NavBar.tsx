@@ -9,12 +9,12 @@ const NavBar = (props: any) => {
     <nav>
       <div className="mobile-elements">
         {/* eslint-disable-next-line */}
-        <a href="#" onClick={() => setMenu(true)}>
+        <button onClick={() => setMenu(true)} className="hamburger-button">
           <i
             className="hamburger-icon fas fa-bars fa-2x"
             style={{ color: '#ffff' }}
           ></i>
-        </a>
+        </button>
         <Link to={props.homeLink} className="home-link-mobile">
           Black & Techy
         </Link>
