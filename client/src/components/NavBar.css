@@ -94,7 +94,7 @@ nav a:hover {
     width: 40%;
     height: 100%;
     background-color: #00bcd4;
-    opacity: 97%;
+    opacity: 0.95;
     position: absolute;
     animation: 0.75s ease-out 0s 1 slide-in-from-left;
     -webkit-animation-name: slide-in-from-left;
