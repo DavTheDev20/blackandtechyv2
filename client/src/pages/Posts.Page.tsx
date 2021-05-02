@@ -8,9 +8,11 @@ const Posts = () => {
 
   const getPosts = async () => {
     try {
-      await axios.get('http://localhost:8080/posts/api').then((res) => {
-        setPostsArr(res.data);
-      });
+      await axios
+        .get('https://blackandtechyv2.herokuapp.com/posts/api')
+        .then((res) => {
+          setPostsArr(res.data);
+        });
       // setIsLoading(false);
     } catch {
       swal({
