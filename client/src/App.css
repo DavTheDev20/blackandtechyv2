@@ -26,6 +26,7 @@
   right: 25%;
   /* margin-right: 34.375rem; */
   text-align: left;
+  line-height: 1.4;
 }
 
 .welcome-text-section {
@@ -110,7 +111,7 @@ textarea:focus {
   margin: 2% auto;
   border: 3px solid #00bcd4;
   border-radius: 30px;
-  width: 23%;
+  width: 25%;
   padding: 2%;
   box-shadow: 2.5px 2.5px 10px black;
 }
@@ -121,8 +122,9 @@ textarea:focus {
 }
 
 .post p {
-  width: 60%;
+  width: 90%;
   margin: 3% auto 2%;
+  line-height: 1.4;
 }
 
 .Admin table {
@@ -207,7 +209,8 @@ footer {
   }
 
   .post {
-    width: 75%;
+    width: 77%;
+    margin: 5% auto;
   }
 
   .Admin {
