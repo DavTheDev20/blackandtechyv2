@@ -29,7 +29,7 @@
 }
 
 .welcome-text-section {
-  color: #ff5722;
+  color: #da0037;
 }
 
 .Create {
@@ -39,7 +39,7 @@
 
 .Create h1 {
   margin-bottom: 4%;
-  color: #00bcd4;
+  color: #da0037;
 }
 
 .post-inputs {
@@ -53,12 +53,12 @@
   width: 4%;
   border-radius: 15px;
   border: none;
-  background-color: #ff5722;
+  background-color: #da0037;
   color: #ffff;
 }
 
 .post-button:hover {
-  background-color: #dd2c00;
+  background-color: #ff255c;
   cursor: pointer;
 }
 
@@ -98,17 +98,17 @@ input[type='text'] {
 
 input[type='text']:focus,
 textarea:focus {
-  outline: 3px solid #ff5722;
+  outline: 3px solid #da0037;
 }
 
 .Posts h1 {
   margin-bottom: 4%;
-  color: #00bcd4;
+  color: #da0037;
 }
 
 .post {
   margin: 2% auto;
-  border: 3px solid #00bcd4;
+  border: 3px solid #da0037;
   border-radius: 30px;
   width: 23%;
   padding: 2%;
@@ -191,7 +191,6 @@ footer {
     width: 95%;
     position: initial;
     margin-top: 5%;
-    color: #00bcd4;
   }
 
   .Create {

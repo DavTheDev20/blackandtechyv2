@@ -1,10 +1,10 @@
 /* Code without media query = Desktop Viewport */
 nav {
-  background-color: #ff5722;
+  background-color: #da0037;
   /* padding-bottom: 0.75rem; */
   text-align: center;
   margin-bottom: 2%;
-  border-bottom: 2px solid #dd2c00;
+  border-bottom: 1px solid #444444;
 }
 
 nav ul {
@@ -21,12 +21,12 @@ nav li {
 
 nav a {
   margin: 0;
-  color: #ffff;
+  color: #ededed;
   text-decoration: none;
 }
 
 .home-link {
-  font-family: "Ranchers", cursive;
+  font-family: 'Ranchers', cursive;
   font-size: 2.25rem;
   -webkit-text-stroke: 1px black;
 }
@@ -41,9 +41,9 @@ nav a {
   text-decoration: underline;
 }
 
-nav a:hover {
-  color: #00bcd4;
-}
+/* nav a:hover {
+  color: #444444;
+} */
 
 .mobile-elements {
   display: none;
@@ -67,16 +67,16 @@ nav a:hover {
     border: none;
     padding: 0;
     left: 5%;
-    top: 2%;
+    top: 1.5%;
   }
   .hamburger-icon {
     display: initial;
     position: absolute;
     left: 5%;
-    top: 2%;
+    top: 1.5%;
   }
   .home-link-mobile {
-    font-family: "Ranchers", cursive;
+    font-family: 'Ranchers', cursive;
     -webkit-text-stroke: 1px black;
     display: initial;
     position: absolute;
@@ -93,7 +93,7 @@ nav a:hover {
     z-index: 1;
     width: 40%;
     height: 100%;
-    background-color: #00bcd4;
+    background-color: #444444;
     opacity: 0.95;
     position: absolute;
     animation: 0.75s ease-out 0s 1 slide-in-from-left;
