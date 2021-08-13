@@ -9,12 +9,14 @@ import './App.css';
 import Footer from './components/Footer';
 
 function App() {
+  const admin_path = `/posts/api/admin`;
+
   return (
     <Router>
       <div>
         <NavBar postsLink="/posts" homeLink="/" createLink="/create" />
         <Switch>
-          <Route path="/posts/api/admin">
+          <Route path={admin_path}>
             <Admin />
           </Route>
           <Route path="/posts">

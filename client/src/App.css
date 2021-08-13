@@ -130,8 +130,14 @@ textarea:focus {
 
 .Admin table {
   text-align: center;
-  margin: 2% auto;
-  border: 2px solid black;
+  /* margin: 1% auto; */
+  /* border: 2px solid black; */
+  color: black;
+}
+
+.Admin h1 {
+  color: black;
+  margin-bottom: 10px;
 }
 
 .Admin {
@@ -140,7 +146,11 @@ textarea:focus {
 
 .Admin td {
   border: 1px solid black;
-  padding: 1.5%;
+  padding: 12px;
+}
+
+.Admin button {
+  margin-top: auto;
 }
 
 .post-row .delete-button {
@@ -204,9 +214,9 @@ footer {
     width: 25%;
   }
 
-  .post-button:hover {
+  /* .post-button:hover {
     color: #ff5722;
-  }
+  } */
 
   .post {
     width: 77%;

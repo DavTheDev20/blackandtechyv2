@@ -66,9 +66,11 @@ nav a {
     position: absolute;
     border: none;
     padding: 0;
+    margin: 0;
     left: 5%;
-    top: 1.5%;
+    top: 2%;
   }
+
   .hamburger-icon {
     display: initial;
     position: absolute;
