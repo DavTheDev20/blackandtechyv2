@@ -12,7 +12,7 @@ postsRouter
       if (err) {
         console.log(err);
       } else {
-        res.json(posts);
+        res.json(posts).status(200);
       }
     });
   })
@@ -30,7 +30,7 @@ postsRouter
         console.log(err);
       } else {
         console.log('Post was saved');
-        res.json({ msg: `Post by: ${post.author}, was saved.` });
+        res.json({ msg: `Post by: ${post.author}, was saved.` }).status(200);
       }
     });
   })
@@ -41,7 +41,12 @@ postsRouter
         console.log(err);
       } else {
         console.log('Post was deleted.');
-        res.send({ result: response });
+        res
+          .json({
+            result: response,
+            msg: 'Post has been deleted successfully.',
+          })
+          .status(200);
       }
     });
   });

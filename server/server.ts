@@ -32,9 +32,9 @@ if (process.env.NODE_ENV === 'production') {
   // Accesses application files from build upon deployment.
   app.use(express.static(path.join(__dirname, '../client/build')));
 
-  app.get('*', (req:any, res:any) => {
+  app.get('*', (req: any, res: any) => {
     res.sendFile(path.join(__dirname, '../', 'client', 'build', 'index.html'));
-});
+  });
 }
 
 app.listen(port, () => console.log(`Server running on port: ${port}`));

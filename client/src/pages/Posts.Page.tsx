@@ -29,10 +29,6 @@ const Posts = () => {
   return (
     <div className="Posts">
       <h1>Posts</h1>
-      {/* <i
-        className="fas fa-spinner loading-spinner fa-3x"
-        style={isLoading ? { display: 'inital' } : { display: 'none' }}
-      ></i> */}
       {postsArr.map((post: any) => {
         return (
           <div className="post" key={post._id}>
