@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import swal from 'sweetalert';
+import CircleLoadingAnimation from '../images/Dual Ring-1.5s-200px.svg';
 
 const Posts = () => {
   const [postsArr, setPostsArr] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   const getPosts = async () => {
     try {
       await axios
         .get('https://blackandtechyv2.herokuapp.com/posts/api')
         .then((res) => {
+          setIsLoading(false);
           setPostsArr(res.data);
         });
       // setIsLoading(false);
@@ -29,6 +31,7 @@ const Posts = () => {
   return (
     <div className="Posts">
       <h1>Posts</h1>
+      {isLoading ? <img src={CircleLoadingAnimation} alt="loading..." /> : null}
       {postsArr.map((post: any) => {
         return (
           <div className="post" key={post._id}>
