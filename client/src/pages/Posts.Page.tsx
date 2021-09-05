@@ -7,7 +7,7 @@ const Posts = () => {
   const [postsArr, setPostsArr] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const databaseURL = 'http://localhost:8080/posts/api' || 'https://blkandtechy.com/posts/api'
+  const databaseURL = 'https://blkandtechy.com/posts/api'
 
   const getPosts = async () => {
     try {
