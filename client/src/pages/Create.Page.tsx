@@ -72,7 +72,7 @@ const Create = () => {
 
     axios({
       method: 'POST',
-      url: 'https://blackandtechyv2.herokuapp.com/posts/api/save',
+      url: 'http://localhost:8080/posts/api/save'|| 'https://blackandtechyv2.herokuapp.com/posts/api/save',
       data: {
         author: post.author,
         title: post.title,

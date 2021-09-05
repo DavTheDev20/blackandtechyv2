@@ -10,7 +10,7 @@ const Posts = () => {
   const getPosts = async () => {
     try {
       await axios
-        .get('https://blackandtechyv2.herokuapp.com/posts/api')
+        .get('http://localhost:8080/posts/api' || 'https://blackandtechyv2.herokuapp.com/posts/api')
         .then((res) => {
           setIsLoading(false);
           setPostsArr(res.data);

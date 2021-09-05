@@ -7,7 +7,7 @@ const Admin = () => {
 
   const getPosts = () => {
     axios
-      .get('https://blackandtechyv2.herokuapp.com/posts/api')
+      .get('http://localhost:8080/posts/api' || 'https://blackandtechyv2.herokuapp.com/posts/api')
       .then((res) => setPostsArr(res.data))
       .catch((err) => swal({ icon: 'error', text: 'Error retrieving posts.' }));
   };
@@ -17,7 +17,7 @@ const Admin = () => {
 
     axios({
       method: 'DELETE',
-      url: 'https://blackandtechyv2.herokuapp.com/posts/api/delete',
+      url: 'http://localhost:8080/posts/api/delete' || 'https://blackandtechyv2.herokuapp.com/posts/api/delete',
       data: {
         _id: value,
       },

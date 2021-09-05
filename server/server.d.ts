@@ -7,3 +7,4 @@ declare const Post: any;
 declare const postsRouter: any;
 declare const app: any;
 declare const port: string | number;
+declare const DB_URL: string;
