@@ -7,10 +7,12 @@ const Posts = () => {
   const [postsArr, setPostsArr] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
+  const databaseURL = 'http://localhost:8080/posts/api' || 'https://blkandtechy.com/posts/api'
+
   const getPosts = async () => {
     try {
       await axios
-        .get('http://localhost:8080/posts/api' || 'https://blackandtechyv2.herokuapp.com/posts/api')
+        .get(databaseURL)
         .then((res) => {
           setIsLoading(false);
           setPostsArr(res.data);
