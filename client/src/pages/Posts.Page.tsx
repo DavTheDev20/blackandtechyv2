@@ -7,16 +7,14 @@ const Posts = () => {
   const [postsArr, setPostsArr] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const databaseURL = 'https://blkandtechy.com/posts/api'
+  const databaseURL = 'http://localhost:8080/posts/api';
 
   const getPosts = async () => {
     try {
-      await axios
-        .get(databaseURL)
-        .then((res) => {
-          setIsLoading(false);
-          setPostsArr(res.data);
-        });
+      await axios.get(databaseURL).then((res) => {
+        setIsLoading(false);
+        setPostsArr(res.data);
+      });
       // setIsLoading(false);
     } catch {
       swal({

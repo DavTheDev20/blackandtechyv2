@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 const Admin = () => {
   const [postsArr, setPostsArr] = useState([]);
 
-  const databaseURL = 'https://blkandtechy.com/posts/api';
+  const databaseURL = 'http://localhost:8080/posts/api';
 
   const getPosts = () => {
     axios
