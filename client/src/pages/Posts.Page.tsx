@@ -7,17 +7,17 @@ const Posts = () => {
   const [postsArr, setPostsArr] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const databaseURL = 'https://blkandtechy.com/posts/api'
+  const apiURL = process.env['REACT_APP_API_URL']!;
+
+  axios.defaults.headers.common['Auth-Token'] =
+    process.env['REACT_APP_AUTH_TOKEN'];
 
   const getPosts = async () => {
     try {
-      await axios
-        .get(databaseURL)
-        .then((res) => {
-          setIsLoading(false);
-          setPostsArr(res.data);
-        });
-      // setIsLoading(false);
+      await axios.get(apiURL).then((res) => {
+        setIsLoading(false);
+        setPostsArr(res.data);
+      });
     } catch {
       swal({
         icon: 'error',
