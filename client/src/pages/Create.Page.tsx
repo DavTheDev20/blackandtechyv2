@@ -10,7 +10,7 @@ const Create = () => {
     link: '',
   });
 
-  const databaseURL = 'https://blackandtechyv2.herokuapp.com/posts/api'
+  const apiURL = process.env['REACT_APP_API_URL'];
 
   const handleChange = ({ target }: any) => {
     const { name, value } = target;
@@ -74,7 +74,7 @@ const Create = () => {
 
     axios({
       method: 'POST',
-      url: databaseURL + '/save',
+      url: apiURL + '/save',
       data: {
         author: post.author,
         title: post.title,

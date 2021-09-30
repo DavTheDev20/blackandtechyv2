@@ -5,11 +5,14 @@ import swal from 'sweetalert';
 const Admin = () => {
   const [postsArr, setPostsArr] = useState([]);
 
-  const databaseURL = 'https://blkandtechy.com/posts/api';
+  axios.defaults.headers.common['Auth-Token'] =
+    process.env['REACT_APP_AUTH_TOKEN'];
+
+  const apiURL = process.env['REACT_APP_API_URL']!;
 
   const getPosts = () => {
     axios
-      .get(databaseURL)
+      .get(apiURL)
       .then((res) => setPostsArr(res.data))
       .catch((err) => swal({ icon: 'error', text: 'Error retrieving posts.' }));
   };
@@ -19,7 +22,7 @@ const Admin = () => {
 
     axios({
       method: 'DELETE',
-      url: databaseURL + '/delete',
+      url: apiURL + '/delete',
       data: {
         _id: value,
       },
