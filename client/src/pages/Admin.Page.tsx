@@ -74,7 +74,7 @@ const Admin = () => {
                 <td>{post._id}</td>
                 <td>{post.author}</td>
                 <td>{post.title}</td>
-                <td>{post.postContent}</td>
+                <td>{post.postContent.slice(0, 30)}...</td>
                 {post.link == null ? <td>no link</td> : <td>{post.link}</td>}
                 <td>{post.dateCreated}</td>
                 <button

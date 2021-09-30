@@ -88,7 +88,7 @@ textarea {
   padding: 10px;
 }
 
-input[type='text'] {
+input[type="text"] {
   width: 245px;
   border: 1px solid #dd2c00;
   border-radius: 30px;
@@ -97,7 +97,7 @@ input[type='text'] {
   padding: 5px;
 }
 
-input[type='text']:focus,
+input[type="text"]:focus,
 textarea:focus {
   outline: 3px solid #da0037;
 }
@@ -130,7 +130,7 @@ textarea:focus {
 
 .Admin table {
   text-align: center;
-  /* margin: 1% auto; */
+  margin: 1% auto;
   /* border: 2px solid black; */
   color: black;
 }
@@ -150,13 +150,20 @@ textarea:focus {
 }
 
 .Admin button {
-  margin-top: auto;
+  margin-top: 5%;
 }
 
 .post-row .delete-button {
-  color: red;
+  background-color: red;
+  font-weight: 600;
+  padding: 0.5%;
   position: relative;
   top: 5%;
+  cursor: pointer;
+}
+
+.post-row .delete-button:hover {
+  background-color: rgba(255, 0, 0, 0.63);
 }
 
 footer {

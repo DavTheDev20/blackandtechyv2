@@ -17,7 +17,7 @@ function App() {
         <NavBar postsLink="/posts" homeLink="/" createLink="/create" />
         <Switch>
           <Route path={admin_path}>
-            <Admin />
+            <Admin/>
           </Route>
           <Route path="/posts">
             <Posts />
