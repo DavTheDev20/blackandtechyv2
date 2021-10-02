@@ -5,13 +5,21 @@ const postsRouter = express.Router();
 
 const authToken = process.env['AUTH_TOKEN'];
 
+/**
+ * This function checks to see if an Auth-Token was presented in the header.
+ * If so the function will allow the database json data to be accessed.
+ */
 function securedRoute(req, res, next) {
-  if (req.headers['auth-token'] === authToken) {
-    next();
+  if (req.headers['auth-token']) {
+    if (req.headers['auth-token'] === authToken) {
+      next();
+    } else {
+      res.status(401).json({ msg: 'Unauthorized, Auth-Token is incorrect.' });
+    }
   } else {
     res
-      .status(401)
-      .json({ msg: 'Unauthorized, Auth-Token required in header.' });
+      .status(400)
+      .json({ msg: 'Unauthorized, Auth-Token not presented in header.' });
   }
 }
 

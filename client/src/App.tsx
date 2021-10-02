@@ -3,9 +3,9 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home.Page';
 import Posts from './pages/Posts.Page';
 import Create from './pages/Create.Page';
-import NavBar from './components/NavBar';
 import Admin from './pages/Admin.Page';
 import './App.css';
+import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 
 function App() {

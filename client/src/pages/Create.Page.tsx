@@ -12,6 +12,9 @@ const Create = () => {
 
   const apiURL = process.env['REACT_APP_API_URL'];
 
+  axios.defaults.headers.common['Auth-Token'] =
+    process.env['REACT_APP_AUTH_TOKEN'];
+
   const handleChange = ({ target }: any) => {
     const { name, value } = target;
 
@@ -83,7 +86,6 @@ const Create = () => {
       },
     })
       .then((res) => {
-        console.log(res.data.msg);
         setPost({
           author: '',
           title: '',
