@@ -20,25 +20,38 @@ const Admin = () => {
   const deletePost = ({ target }: any) => {
     const { value } = target;
 
-    axios({
-      method: 'DELETE',
-      url: apiURL + '/delete',
-      data: {
-        _id: value,
-      },
+    swal({
+      title: "Are you sure?",
+      text: "Once deleted, a post cannot be retrived.",
+      icon: "warning",
+      // @ts-ignore
+      buttons: true,
+      dangerMode: true,
     })
-      .then((res: any) => {
-        console.log(res.msg);
-        swal({ icon: 'success', text: 'Post successfully deleted' });
-        getPosts();
-      })
-      .catch((err) =>
-        swal({ icon: 'error', text: 'Error deleting post please try again.' })
-      );
+    .then((willDelete) => {
+      if (willDelete) {
+        axios({
+          method: 'DELETE',
+          url: apiURL + '/delete',
+          data: {
+            _id: value,
+          },
+        })
+          .then((res: any) => {
+            console.log(res.msg);
+            swal({ icon: 'success', text: 'Post successfully deleted' });
+            getPosts();
+          })
+          .catch((err) =>
+            swal({ icon: 'error', text: 'Error deleting post please try again.' })
+          );
+      }
+    });
   };
 
   useEffect(() => {
     getPosts();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -74,9 +87,9 @@ const Admin = () => {
                 <td>{post._id}</td>
                 <td>{post.author}</td>
                 <td>{post.title}</td>
-                <td>{post.postContent.slice(0, 30)}...</td>
-                {post.link == null ? <td>no link</td> : <td>{post.link}</td>}
-                <td>{post.dateCreated}</td>
+                <td>{post.postContent.length > 25 ? post.postContent.slice(0, 25) + "..." : post.postContent}</td>
+                {post.link == null ? <td>no link</td> : <td><a href={post.link}>{post.link}</a></td>}
+                <td>{post.dateCreated.slice(0, 10)}</td>
                 <button
                   className="delete-button"
                   value={post._id}
