@@ -15,7 +15,7 @@ mongoose.connect(DB_URL, //Connects to mongodb cloud database or local database.
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-}, function (err) { return (err ? console.log(err) : console.log('Connected to database')); }
+}, function (err) { return (err ? console.log(err) : DB_URL === 'mongodb://localhost:27017/black-techy-v2-DB' ? console.log('Connected to development database') : console.log('Connected to production database.')); }
 // Checks if the database has successfully connected.
 );
 app.use(morgan('tiny'));

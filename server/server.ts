@@ -9,7 +9,7 @@ const postsRouter = require('./routes/postsRouter');
 
 const app = express();
 const port = process.env.PORT || 8080;
-const DB_URL =
+const DB_URL: string =
   process.env.MONGODB_CLOUD_URI ||
   `mongodb://localhost:27017/black-techy-v2-DB`;
 
@@ -19,7 +19,7 @@ mongoose.connect(
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
-  (err: any) => (err ? console.log(err) : console.log('Connected to database'))
+  (err: any) => (err ? console.log(err) : DB_URL === 'mongodb://localhost:27017/black-techy-v2-DB' ? console.log('Connected to development database'): console.log('Connected to production database.'))
   // Checks if the database has successfully connected.
 );
 
