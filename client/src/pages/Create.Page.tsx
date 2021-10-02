@@ -86,7 +86,6 @@ const Create = () => {
       },
     })
       .then((res) => {
-        console.log(res.data.msg);
         setPost({
           author: '',
           title: '',
