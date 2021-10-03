@@ -15,9 +15,10 @@ Link ➡ [www.blkandtechy.com](https://blkandtechy.com)
 > ## How setup for development
 
 1. run `npm install`
-2. Create <u>.env.development</u> file and place into the client directory
+2. Create .env.development file and place into the client directory
    - Add random secure value for REACT_APP_AUTH_TOKEN
    - Add REACT_APP_API_URL=http://localhost:8080/posts/api
-3. Create <u>.env</u> file
+   - Add password value for REACT_APP_ADMIN_PASS
+3. Create .env file
    - Add same random secure value for AUTH_TOKEN
 4. run `npm run dev`
