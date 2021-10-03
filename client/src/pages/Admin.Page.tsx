@@ -63,7 +63,7 @@ const Admin = () => {
     // eslint-disable-next-line
   }, []);
 
-  if (pass === process.env.REACT_APP_ADMIN_PASS) {
+  if (pass === process.env['REACT_APP_ADMIN_PASS']) {
     return (
       <div className="Admin">
         <h1>Admin</h1>
