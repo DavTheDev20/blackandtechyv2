@@ -14,12 +14,10 @@ function securedRoute(req, res, next) {
     if (req.headers['auth-token'] === authToken) {
       next();
     } else {
-      res.status(401).json({ msg: 'Unauthorized, Auth-Token is incorrect.' });
+      res.status(401).send('Unauthorized, Auth-Token is incorrect.');
     }
   } else {
-    res
-      .status(400)
-      .json({ msg: 'Unauthorized, Auth-Token not presented in header.' });
+    res.status(400).send('Unauthorized, Auth-Token not presented in header.');
   }
 }
 
@@ -32,7 +30,7 @@ postsRouter
       if (err) {
         console.log(err);
       } else {
-        res.json(posts).status(200);
+        res.status(200).json(posts);
       }
     });
   })
@@ -50,7 +48,7 @@ postsRouter
         console.log(err);
       } else {
         console.log('Post was saved');
-        res.json({ msg: `Post by: ${post.author}, was saved.` }).status(200);
+        res.status(200).json({ msg: `Post by: ${post.author}, was saved.` });
       }
     });
   })
@@ -61,12 +59,10 @@ postsRouter
         console.log(err);
       } else {
         console.log('Post was deleted.');
-        res
-          .json({
-            result: response,
-            msg: 'Post has been deleted successfully.',
-          })
-          .status(200);
+        res.status(200).json({
+          result: response,
+          msg: 'Post has been deleted successfully.',
+        });
       }
     });
   });
