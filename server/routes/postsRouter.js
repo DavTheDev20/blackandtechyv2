@@ -24,8 +24,7 @@ function securedRoute(req, res, next) {
 postsRouter
 
   .get('/api', securedRoute, (req, res) => {
-    //Looks for and returns all posts in database.
-
+    // Looks for and returns all posts in database.
     Post.find((err, posts) => {
       if (err) {
         console.log(err);
@@ -36,6 +35,7 @@ postsRouter
   })
 
   .post('/api/save', securedRoute, (req, res) => {
+    // Saves new post to database
     const newPost = new Post({
       author: req.body.author,
       title: req.body.title,
@@ -54,6 +54,7 @@ postsRouter
   })
 
   .delete('/api/delete', securedRoute, (req, res) => {
+    // Deletes post from database
     Post.deleteOne({ _id: req.body._id }, (err, response) => {
       if (err) {
         console.log(err);
