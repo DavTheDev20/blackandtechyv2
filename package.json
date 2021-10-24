@@ -5,12 +5,13 @@
   "main": "server/server.js",
   "engines": {
     "node": ">=12.19.0",
-    "npm": ">=7.7.5"
+    "npm": ">=6.14.15"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install-server": "cd server && npm install",
     "install-client": "cd client && npm install",
+    "install-all": "npm install && npm run install-server && npm run install-client",
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run install-server && npm run install-client && npm run build",
     "start": "cd server && node server.js",
