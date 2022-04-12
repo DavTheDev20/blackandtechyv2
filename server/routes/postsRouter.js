@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const Post = require('../models/post');
 const postsRouter = express.Router();
 
@@ -26,11 +25,10 @@ postsRouter
   .get('/api', securedRoute, (req, res) => {
     // Looks for and returns all posts in database.
     Post.find((err, posts) => {
-      if (err) {
-        console.log(err);
-      } else {
-        res.status(200).json(posts);
+      if (!err) {
+        return res.status(200).json(posts);
       }
+      console.log(err);
     });
   })
 
@@ -44,27 +42,27 @@ postsRouter
     });
 
     newPost.save((err, post) => {
-      if (err) {
-        console.log(err);
-      } else {
+      if (!err) {
         console.log('Post was saved');
-        res.status(200).json({ msg: `Post by: ${post.author}, was saved.` });
+        return res
+          .status(200)
+          .json({ msg: `Post by: ${post.author}, was saved.` });
       }
+      console.log(err);
     });
   })
 
   .delete('/api/delete', securedRoute, (req, res) => {
     // Deletes post from database
     Post.deleteOne({ _id: req.body._id }, (err, response) => {
-      if (err) {
-        console.log(err);
-      } else {
+      if (!err) {
         console.log('Post was deleted.');
-        res.status(200).json({
+        return res.status(200).json({
           result: response,
           msg: 'Post has been deleted successfully.',
         });
       }
+      console.log(err);
     });
   });
 

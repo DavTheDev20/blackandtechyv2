@@ -44,7 +44,6 @@ const Admin = () => {
           },
         })
           .then((res: any) => {
-            console.log(res.msg);
             swal({ icon: 'success', text: 'Post successfully deleted' });
             getPosts();
           })
